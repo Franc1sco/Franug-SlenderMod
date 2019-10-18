@@ -1,0 +1,14 @@
+"UnlitGeneric"
+{
+	"$basetexture" "overlays/slender/p5b3"
+	"$translucent" 1
+    "Proxies" 
+    { 
+        "AnimatedTexture" 
+        {
+            "animatedTextureVar" "$basetexture" 
+            "animatedTextureFrameNumVar" "$frame" 
+            "animatedTextureFrameRate" "1"
+         } 
+    } 
+}
