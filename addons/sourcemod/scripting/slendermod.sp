@@ -22,6 +22,8 @@
 #include <smartdm>
 #include <multicolors>
 
+#define PLUGIN_VERSION "0.2beta"
+
 #define EF_DIMLIGHT 4
 
 int g_linterna[MAXPLAYERS + 1];
@@ -48,12 +50,15 @@ public Plugin:myinfo =
 	name = " SM Franug Slender Mod",
 	author = "Franc1sco franug",
 	description = "",
-	version = "0.2beta",
+	version = PLUGIN_VERSION,
 	url = "http://steamcommunity.com/id/franug"
 }
  
 public OnPluginStart()
 {
+	CreateConVar("sm_franugslendermod_version", PLUGIN_VERSION, "", FCVAR_SPONLY|FCVAR_NOTIFY|FCVAR_DONTRECORD|FCVAR_REPLICATED);
+	
+	
 	g_Game = GetEngineVersion();
 	
 	HookEvent("round_freeze_end", Event_Start);
